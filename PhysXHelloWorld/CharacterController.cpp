@@ -89,9 +89,7 @@ void CharacterController::moveLeft(float distance) {
         // Move the controller
         physx::PxControllerFilters filters = physx::PxControllerFilters();
         capsuleController->move(movement, 0.0f, 0.001f, filters);
-
     }
-
 }
 
 void CharacterController::jump() {

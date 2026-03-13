@@ -98,7 +98,6 @@ int main() {
     // Create Character instance
     CharacterController character(controllerManager, scene);
 
-
     // Call createCharacter to initialize the character
     physx::PxMaterial* characterMaterial = physics->createMaterial(0.5f, 0.5f, 0.1f);
 
@@ -113,7 +112,7 @@ int main() {
         // Process input, update game state, etc. (you can add your game logic here)
 
         // Simulate the scene
-        scene->simulate(timeStep*slowMotionFactor);
+        scene->simulate(timeStep);
         scene->fetchResults(true);
         
         character.update();
